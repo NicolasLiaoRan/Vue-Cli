@@ -6,11 +6,14 @@
 </template>
 
 <script>
+import store from '@/store'
 export default {
   name:'info',
+  store,
   methods:{
     add(){
       console.log("add event")
+      store.commit('increase')
     }
   }
 }
